@@ -9,11 +9,14 @@
   <!-- This is the body of the page -->
   <body>
     <!-- This is the js file -->
-    <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Page heading -->
     <h1>What's your favorite number?</h1>
     
-    <form action="">
+    <!-- This is the form -->
+    <form id="num" method="post">
       First name:<br>
       <input type="text" name="firstname"><br>
       Last name:<br>
@@ -22,6 +25,8 @@
       <input type="number" name="number"><br><br>
       <input type="submit" value="Submit">
     </form> 
+
+    <div id="results"></div>
 
   </body>
 </html>
