@@ -10,22 +10,21 @@ function Person(fname,sname,num){
 }
 
 $(document).ready(function(){
-  $("#submitBtn").click(function(){        
-      $("#numForm").submit(); // Submit the form
+
+  $("#submitBtn").click(function(){    
       var p = new Person(
         document.getElementById('firstname').value, 
         document.getElementById('lastname').value,
         document.getElementById('number').value
       );
+      document.getElementById("numForm").reset();
       console.log(p);
       var myJSON = JSON.stringify(p);
-      data = data + myJSON + "<br>";
-      window.localStorage.setItem('dataStorage', data);
+      data = data + myJSON + "<br/>";
   });
 
   $("#outputBtn").click(function(){  
-    var output = window.localStorage.getItem('dataStorage');
-    $("#results").append(output);
+    $("#results").html(data);
   });
 });
 
